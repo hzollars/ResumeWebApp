@@ -18,7 +18,7 @@ router.get('/all', function(req, res) {
 });
 
 // View the school for the given id
-router.get('/byid', function(req, res){
+router.get('/', function(req, res){
     if(req.query.school_id == null) {
         res.send('school_id is null');
     }

@@ -10,6 +10,7 @@ var school = require('./routes/school_routes');
 var account = require('./routes/account_routes');
 var resume = require('./routes/resume_routes');
 var company = require('./routes/company_routes');
+var address = require('./routes/address_routes');
 
 var app = express();
 
@@ -34,6 +35,9 @@ app.use('/', index);
 app.use('/resume', resume);
 app.use('/', index);
 app.use('/company', company);
+app.use('/', index);
+app.use('/address', address);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
