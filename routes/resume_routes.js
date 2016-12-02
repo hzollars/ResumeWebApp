@@ -28,7 +28,7 @@ router.get('/', function(req, res){
                res.send(err);
            }
            else {
-               res.render('resume/resumeViewById', {'result': result});
+               res.render('account/accountViewById', {'result': result});
            }
         });
     }
@@ -53,7 +53,7 @@ router.get('/insert', function(req, res){
     if(req.query.resume_name == null) {
         res.send('resume Name must be provided.');
     }
-    else if(req.query.address_id == null) {
+    else if(req.query.account_id == null) {
         res.send('An Address must be selected');
     }
     else {
